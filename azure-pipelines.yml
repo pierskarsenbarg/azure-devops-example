@@ -9,7 +9,7 @@ jobs:
     vmImage: 'ubuntu-16.04'
   steps:
   - task: UseDotNet@2
-  inputs:
+    inputs:
     version: '5.0.x'
   - task: Pulumi@1
     condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
