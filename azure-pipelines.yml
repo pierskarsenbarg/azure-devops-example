@@ -12,7 +12,7 @@ jobs:
     inputs:
       version: '5.0.x'
   - task: Pulumi@1
-    condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
+    # condition: or(eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'Manual'))
     inputs:
       # Using a service connection is optional. Specify build variables for your pipeline or link variable groups
       # that contain the necessary environment variables needed by the Pulumi provider your Pulumi app uses.
