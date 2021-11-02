@@ -16,7 +16,7 @@ jobs:
     inputs:
       # Using a service connection is optional. Specify build variables for your pipeline or link variable groups
       # that contain the necessary environment variables needed by the Pulumi provider your Pulumi app uses.
-      azureSubscription: 'team-ce'
+      azureSubscription: 'teamceserviceconnection'
       command: 'preview'
       stack: 'pierskarsenbarg/azure-devops-csharp/dev'
   - task: Pulumi@1
@@ -24,7 +24,7 @@ jobs:
     inputs:
       # Using a service connection is optional. Specify build variables for your pipeline or link variable groups
       # that contain the necessary environment variables needed by the Pulumi provider your Pulumi app uses.
-      azureSubscription: 'team-ce'
+      azureSubscription: 'teamceserviceconnection'
       command: 'up'
       stack: 'pierskarsenbarg/azure-devops-csharp/dev'
       args: '--yes'
